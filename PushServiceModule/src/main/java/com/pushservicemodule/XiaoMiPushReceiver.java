@@ -5,6 +5,10 @@ import android.content.Context;
 import com.xiaomi.mipush.sdk.MiPushMessage;
 import com.xiaomi.mipush.sdk.PushMessageReceiver;
 
+/**
+ * test
+ */
+@Deprecated
 public class XiaoMiPushReceiver extends PushMessageReceiver {
     @Override
     public void onReceiveMessage(Context context, MiPushMessage miPushMessage) {

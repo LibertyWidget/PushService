@@ -1,9 +1,6 @@
 package com.pushservicemodule;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.util.Log;
 
 import com.tencent.android.tpush.XGIOperateCallback;
@@ -30,11 +27,6 @@ public class PushManager {
         XGPushConfig.enableOtherPush(context, true);
         //huaWei
         XGPushConfig.setHuaweiDebug(debug);
-        //注册数据更新监听器
-        MsgReceiver updateListViewReceiver = new MsgReceiver();
-        IntentFilter intentFilter = new IntentFilter();
-        intentFilter.addAction("com.qq.xgdemo.activity.UPDATE_LISTVIEW");
-        context.registerReceiver(updateListViewReceiver, intentFilter);
           /*
         注册信鸽服务的接口
         如果仅仅需要发推送消息调用这段代码即可
@@ -55,14 +47,6 @@ public class PushManager {
                     }
                 });
         XGPushConfig.getToken(context);
-    }
-
-    public class MsgReceiver extends BroadcastReceiver {
-
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            Log.e("tag", "123");
-        }
     }
 
     public void initXiaoMi(Context context, String app_id, String app_key) {

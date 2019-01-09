@@ -9,13 +9,15 @@ import com.meizu.cloud.pushsdk.platform.message.RegisterStatus;
 import com.meizu.cloud.pushsdk.platform.message.SubAliasStatus;
 import com.meizu.cloud.pushsdk.platform.message.SubTagsStatus;
 import com.meizu.cloud.pushsdk.platform.message.UnRegisterStatus;
-
+/**
+ * test
+ */
+@Deprecated
 public class MZPushReceiver extends MzPushMessageReceiver {
 
     @Override
     public void onRegister(Context context, String s) {
         Log.e("tag", "onRegister");
-
     }
 
     @Override

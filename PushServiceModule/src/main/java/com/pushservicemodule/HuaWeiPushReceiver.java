@@ -4,7 +4,10 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.Looper;
 import android.widget.Toast;
-
+/**
+ * test
+ */
+@Deprecated
 public class HuaWeiPushReceiver extends com.huawei.hms.support.api.push.PushReceiver {
     @Override
     public void onEvent(Context context, Event arg1, Bundle arg2) {
