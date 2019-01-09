@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //信鸽普通版本jar，不包含厂商通道
+    implementation  'com.tencent.xinge:xinge:4.0.4-release'
+    //compile'com.tencent.xinge:xinge:4.2.0-Beta'
+    //根据需求选择对应的版本号
+    implementation 'com.tencent.xinge:xinge:4.0.4-release'
+    implementation 'com.tencent.wup:wup:1.0.0.E-release'
+    implementation 'com.tencent.mid:mid:4.0.7-Release'
+}
